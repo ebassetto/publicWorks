@@ -1,0 +1,33 @@
+<form action="/cart" method="post">
+    <div class="product-options">
+        <div class="product-group">
+            <label>Qty</label>
+            <select name="quantity">
+                <option value="100">100</option>
+                <option value="250">250</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+                <option value="2500">2500</option>
+            </select>
+        </div>
+        <div class="product-group">
+            <label>Delivery</label>
+            <select name="delivery_date">
+                <option value="1">1 day</option>
+                <option value="2">2 days</option>
+                <option value="3">3 days</option>
+                <option value="7">7 days</option>
+            </select>
+        </div>
+        <div class="product-group">
+            <label>Type</label>
+            <select name="file_type">
+                <option value="pdf">PDF</option>
+                <option value="psd">PSD</option>
+                <option value="ai">AI</option>
+            </select>
+        </div>
+    </div>
+    <input type="hidden" name="product_id" value="<%= product._id %>">
+    <button class="btn" type="submit">Add to Cart</button>
+</form>
